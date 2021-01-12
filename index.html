@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speed Testing Game</title>
+    <link rel="stylesheet" href="./Assets/style.css" />
+    <link rel="stylesheet" href="./Assets/css/all.css" />
+    <link rel="stylesheet" href="./Assets/css/brands.css" />
+    <link rel="stylesheet" href="./Assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="./Assets/css/regular.css" />
+    <link rel="stylesheet" href="./Assets/css/solid.css" />
+  </head>
+  <body>
+    <div class="wrapper" id="wrapper">
+      <div class="left">
+        <div class="heading">
+          <div class="paragraph">
+            <p>Welcome to the</p>
+          </div>
+          <p class="logo">iSpeed</p>
+        </div>
+        <div class="littletext">
+          <p>How fast can you type?</p>
+          <p>Arnold Hassle types 0.24wds</p>
+          <p>Beat the highest score</p>
+          <p>Screenshot it</p>
+          <p>Send it to the referrer and win a prize</p>
+        </div>
+        <div class="preamble">
+          <div class="input">
+            <p>Your name is?</p>
+            &nbsp;
+            <input type="text" id="name-input" />
+          </div>
+          <div class="button">
+            <button id="startgame">Start</button>
+          </div>
+        </div>
+        <div class="footer">
+          <p>Made with love by nathan</p>
+        </div>
+      </div>
+
+      <div class="middle">
+        <div class="info">
+          <p>
+            <i class="fas fa-info"> </i> &nbsp; Read as you type to enable you
+            type faster
+          </p>
+        </div>
+        <div class="timer">
+          <p id="timervalue">0s</p>
+        </div>
+        <div class="appointedtext"></div>
+        <div class="textarea">
+          <textarea
+            name="typing"
+            id="typing"
+            placeholder="Type here......"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
