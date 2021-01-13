@@ -39,12 +39,14 @@ button {
 
 @media only screen and (max-width: 480px) {
   body {
-    overflow: hidden;
+    width: 100%;
     .wrapper {
+      overflow: hidden;
       border-radius: 10px;
       width: 100%;
+      height: 600px;
       display: grid;
-      grid-template-columns: 100% 100%;
+      grid-template-columns: repeat(2, 100%);
       &::before {
         content: "";
         position: absolute;
@@ -60,7 +62,7 @@ button {
       .left {
         // margin-top: 70px;
         display: grid;
-        grid-template-rows: repeat(5, 20%);
+        grid-template-rows: 15% 30% 20% 10%;
         height: 100vh;
         padding: 10px;
         padding-top: 30px;
@@ -68,7 +70,6 @@ button {
 
         .heading {
           width: 100%;
-          grid-row: 1/2;
           border: 2px solid $white;
           overflow: hidden;
           border-radius: 20px;
@@ -89,11 +90,8 @@ button {
           }
         }
         .littletext {
-          grid-row: 2/3;
           width: 90%;
-          margin: 0 auto;
-          // @include flex(column, center, center, nowrap);
-          padding-top: 70px;
+          padding: 30px 0 0 20px;
           p {
             border-left: 2px solid $white;
             font-size: 1rem;
@@ -104,20 +102,19 @@ button {
           }
         }
         .preamble {
-          @include flex(column, flex-end, flex-end, nowrap);
-          padding-bottom: 30px;
-
-          grid-row: 3/5;
+          display: grid;
+          grid-template-rows: repeat(2, 50%);
+          padding: 5px 10px;
+          // @include flex(column, flex-end, flex-end, nowrap);
           .input {
             display: flex;
+            height: 40px;
             p {
               color: $white;
               font-size: 1.5rem;
-              padding-bottom: -10px;
             }
             input {
               background: none;
-              // padding: 10px 10px 0 10px;
               outline: none;
               border-width: 0 0 3px 0;
               border-color: $white;
@@ -127,6 +124,9 @@ button {
             }
           }
           .button {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
             button {
               background: none;
               border: 2px solid $white;
@@ -144,8 +144,8 @@ button {
           }
         }
         .footer {
+          // background-color: #760ff4;
           margin-top: 50px;
-          grid-row: 5/6;
           p {
             text-align: center;
             color: $darkergray;
@@ -247,20 +247,20 @@ button {
         transform: translateX(-100%);
       }
       .middle {
-        transform: translateX(-118%);
+        transform: translateX(-100%);
       }
     }
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
   body {
-    overflow: hidden;
     background-image: $background-gradient;
     .wrapper {
       border-radius: 10px;
       width: 100%;
       position: relative;
       display: grid;
+      overflow: hidden;
       grid-template-rows: 100% 100%;
       &::before {
         content: "";
